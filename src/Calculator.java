@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculator implements ActionListener {
+
     JLabel Label= new JLabel();
     JTextField TextField = new JTextField();
     JButton Button0 = new JButton("0");
@@ -30,8 +31,8 @@ public class Calculator implements ActionListener {
 
     double num1 = 0, num2 = 0;
     int ops = 1;
-    public Calculator(){
 
+    public Calculator(){
         prepGUI();
         addComp();
 
@@ -75,6 +76,7 @@ public class Calculator implements ActionListener {
     public void addComp(){
         Dimension buttonSize = new Dimension(80, 60);
         Font buttonFont = new Font("Segoe UI", Font.PLAIN, 20);
+
         Label.setHorizontalAlignment(SwingConstants.RIGHT);
         Label.setBorder(new EmptyBorder(10,10,10,10));
         Label.setFont(new Font("Segoe UI", Font.BOLD, 20));
@@ -83,6 +85,7 @@ public class Calculator implements ActionListener {
         TextField.setBorder(new CompoundBorder(TextField.getBorder(),new EmptyBorder(10, 10, 10, 10)));
         TextField.setFont(new Font("Segoe UI", Font.BOLD, 26));
         TextField.setPreferredSize(new Dimension(240, 50));
+        // 
         Button0.setPreferredSize(buttonSize);
         Button1.setPreferredSize(buttonSize);
         Button2.setPreferredSize(buttonSize);
